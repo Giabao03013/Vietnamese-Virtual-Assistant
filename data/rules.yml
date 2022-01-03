@@ -1,0 +1,98 @@
+version: "2.0"
+
+rules:
+   - rule: Activate form
+     steps:
+      - intent: add_calendar
+      - action: add_event_form
+      - active_loop: add_event_form
+
+   - rule: Submit form
+     condition:
+      - active_loop: add_event_form
+     steps:
+      - action: add_event_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_submit
+      - intent: affirm
+      - action: action_say_yes
+
+   - rule: Deny form
+     condition:
+      - active_loop: add_event_form
+     steps:
+      - action: add_event_form
+      - active_loop: null
+      - slot_was_set:
+             - requested_slot: null
+      - action: action_submit
+      - intent: deny
+      - action: action_say_no
+
+
+   - rule: Update Event
+     steps:
+      - intent: update_calendar
+      - action: update_event_form
+      - active_loop: update_event_form
+
+   - rule: Submit Yes Update
+     condition:
+       - active_loop: update_event_form
+     steps:
+       - action: update_event_form
+       - active_loop: null
+       - slot_was_set:
+            - requested_slot: null
+       - action: action_submit_update
+       - intent: affirm
+       - action: action_update_yes
+
+   - rule: Submit No Update
+     condition:
+           - active_loop: update_event_form
+     steps:
+         - action: update_event_form
+         - active_loop: null
+         - slot_was_set:
+             - requested_slot: null
+         - action: action_submit_update
+         - intent: deny
+         - action: action_update_no
+
+   - rule: Delete Form
+     steps:
+       - intent: del_calendar
+       - action: delete_form
+       - active_loop: delete_form
+
+   - rule: Submit Yes Del
+     condition:
+           - active_loop: delete_form
+     steps:
+         - action: delete_form
+         - active_loop: null
+         - slot_was_set:
+             - requested_slot: null
+         - action: action_submit_del
+         - intent: affirm
+         - action: action_del_yes
+
+   - rule: Submit Yes Del
+     condition:
+           - active_loop: delete_form
+     steps:
+         - action: delete_form
+         - active_loop: null
+         - slot_was_set:
+             - requested_slot: null
+         - action: action_submit_del
+         - intent: deny
+         - action: action_del_no
+
+   - rule: Open app
+     steps:
+       - intent: open_application
+       - action: action_openapp

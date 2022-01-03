@@ -1,0 +1,208 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_name
+  - action: utter_askname
+
+- story: story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_func
+  - action: utter_func
+- story: story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_fun_calendar
+  - action: utter_func_calendar
+- story: bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_bye
+- story: thanks
+  steps:
+  - intent: thanks
+  - action: utter_nothing
+
+- story: see_event
+  steps:
+  - intent: see_calendar
+  - action: action_see_event
+
+- story: interactive_story_1
+  steps:
+  - intent: open_webbrowser
+  - action: action_openweb
+
+- story: covid
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: total_covid_vn
+  - action: action_total_covid
+
+- story: covid_in_city
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: covid_city
+  - action: action_covid_city
+
+- story: weather
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_now
+  - action: action_weather_city
+
+- story: open_app
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: open_application
+  - action: action_openapp
+
+- story: open_web
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: open_webbrowser
+  - action: action_openweb
+
+- story: infomation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: how_are_you
+  - action: utter_how_are_you
+  - intent: what_name
+  - action: utter_askname
+
+- story: covid_info
+  steps:
+    - intent: covid_info
+    - action: action_covid_info
+- story: whattime
+  steps:
+    - intent: whattime
+    - action: action_whattime
+#- story: add_event
+#  steps:
+#    - intent: greet
+#    - action: utter_greet
+#    - intent: add_calendar
+#    - action: utter_add_calendar
+#    - active_loop: user_add_event_form
+#    - active_loop: null
+#    - action: utter_details
+
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: add_calendar
+#    entities:
+#    - start_time: 12:00
+#    - end_time: 13:00
+#  - slot_was_set:
+#    - start_time: 12:00
+#  - slot_was_set:
+#    - end_time: 13:00
+#  - action: add_event_form
+#  - active_loop: add_event_form
+#  - slot_was_set:
+#    - start_time: null
+#  - slot_was_set:
+#    - end_time: null
+#  - slot_was_set:
+#    - start_time: null
+#  - slot_was_set:
+#    - end_time: null
+#  - slot_was_set:
+#    - requested_slot: date
+#  - slot_was_set:
+#    - date: 08-11-2021
+#  - slot_was_set:
+#    - requested_slot: summary
+#  - slot_was_set:
+#    - summary: Học trực tuyến
+#  - slot_was_set:
+#    - summary: Học trực tuyến
+#  - slot_was_set:
+#    - requested_slot: start_time
+#  - slot_was_set:
+#    - start_time: 12:00
+#  - slot_was_set:
+#    - start_time: 12:00
+#  - slot_was_set:
+#    - requested_slot: end_time
+#  - slot_was_set:
+#    - end_time: 13:00
+#  - slot_was_set:
+#    - end_time: null
+#  - slot_was_set:
+#    - start_time: null
+#  - slot_was_set:
+#    - requested_slot: start_time
+#  - slot_was_set:
+#    - start_time: 13:00
+#  - slot_was_set:
+#    - start_time: 13:00
+#  - slot_was_set:
+#    - requested_slot: end_time
+#  - slot_was_set:
+#    - end_time: 14:00
+#  - slot_was_set:
+#    - end_time: 14:00
+#  - slot_was_set:
+#    - requested_slot: location
+#  - slot_was_set:
+#    - location: Cần Thơ
+#  - slot_was_set:
+#    - location: Cần Thơ
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_submit
+#  - intent: user_say_yes
+#  - action: action_say_yes
+#  - slot_was_set:
+#    - date: null
+#  - slot_was_set:
+#    - summary: null
+#  - slot_was_set:
+#    - start_time: null
+#  - slot_was_set:
+#    - end_time: null
+#  - slot_was_set:
+#    - location: null
+#
+#- story: interactive_story_1
+#  steps:
+#  - intent: total_covid_vn
+#    entities:
+#    - case: ca nhiễm
+#  - slot_was_set:
+#    - case: ca nhiễm
+#  - action: action_total_covid
+#  - slot_was_set:
+#    - case: null
+
+
+
+- story: interactive_story_1
+  steps:
+  - intent: open_webbrowser
+  - action: action_openweb

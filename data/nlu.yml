@@ -1,0 +1,386 @@
+version: "2.0"
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - Xin chào
+    - Bạn ơi
+    - Chào buổi tối
+    - Chào buổi sáng
+    - Chào bạn
+    - Có ai ở đây không?
+    - Hey you
+
+- intent: how_are_you
+  examples: |
+    - Bạn có khỏe không
+    - Dạo này bạn thế nào
+    - Bạn sao rồi
+    - How are you
+    - Tình hình bạn sao
+    - Bạn dạo này có ổn không
+    - Ổn không bạn tui?
+    - Sao rồi bạn?
+    - Bạn có Ok không
+    - Ok không bạn?
+    - Bạn thế nào rồi?
+- intent: goodbye
+  examples: |
+    - Chúc ngủ ngon
+    - Bye
+    - Good bye
+    - See you
+    - Chúc bạn có một ngày tốt lành
+    - Hẹn gặp lại bạn
+    - Bai bai
+    - Tạm biệt
+    - See you soon
+    - Gặp lại sau
+- intent: thanks
+  examples: |
+    - Cảm ơn bạn!
+    - Cảm ơn bạn đã giúp đỡ
+    - Cảm ơn bạn rất nhiều
+    - thanks you
+    - thanks
+    - Siêu
+    - Thank you so much
+    - Cảm ơn bạn rất nhiều!
+    - Cảm ơn đã giúp mình
+    - Cảm ơn nhé!
+- intent: ask_func
+  examples: |
+    - Bạn có những chức năng nào thế?
+    - Những chức năng bạn có thể làm là gì?
+    - Bạn có thể làm những gì?
+    - Cho mình biết bạn có thể làm gì nào?
+    - Mình tò mò về những gì bạn làm được?
+    - Kể cho mình biết bạn làm gì được?
+    - Những công việc mà bạn có thể làm là gì?
+    - Việc gì bạn có thể làm được?
+    - Bạn giúp được gì nào?
+    - Chức năng của bạn là gì?
+- intent: what_name
+  examples: |
+    - Bạn tên gì?
+    - Tên của bạn là gì?
+    - Mình muốn biết tên bạn là gì?
+    - Cho mình tên của bạn để tiện xưng hô với nhé?
+    - Bạn có vui lòng cho mình biết tên được không ạ?
+    - Tên của bạn là gì?
+    - Cho tôi biết tên của bạn?
+    - Xin phép hỏi tên của bạn
+    - Tên bạn là gì thế
+    - Tôi muốn biết tên của bạn?
+- intent: ask_fun_calendar
+  examples: |
+    - Bạn có thể làm gì với lịch biểu của tôi?
+    - Quản lý lịch biểu là sao bạn?
+    - Bạn làm gì đc với lịch của tôi
+    - Bạn quản lý lịch biểu như thế nào?
+    - Bạn quản lý lịch biểu ra sao?
+    - Đối với lịch biểu bạn có thể quản lý như nào?
+    - Bạn làm gì đc với lịch?
+    - Bạn có thể làm gì giúp tôi quản lý lịch?
+    - Lịch bạn quản lý làm sao?
+    - Bạn làm gì đc với lịch?
+- intent: see_calendar
+  examples: |
+    - hãy cho xem lịch của ngày hôm qua?
+    - hãy cho xem lịch của mình ngày hôm qua?
+    - ngày hôm qua mình có lịch như nào?
+    - lịch của mình ngày hôm qua như nào?
+    - ngày hôm qua mình có những việc gì
+    - ngày mai mình có các việc gì?
+    - lịch của mai như thế nào?
+    - ngày mai mình có các việc như nào?
+    - ngày mai mình có việc gì thế?
+    - mai mình có kế hoạch như nào
+    - cho tui xem thứ 2 của tuần sau?
+    - thứ 2 của tuần sau là ngày mấy?
+    - thứ 3 của tuần tới là ngày mấy
+    - ngày hôm nay có các sự kiện như nào?
+    - hôm nay của tôi có các sự kiện như nào?
+    - lịch của mình hôm nay như nào?
+    - hôm nay mình có lịch như nào?
+    - kế hoạch của mình hôm nay thế nào?
+    - kế hoạch hôm nay như thế nào?
+    - hôm nay như thế nào?
+    - kế hoạch hôm nay ra sao?
+    - kế hoạch của tháng 1 ra sao?
+    - lịch của ngày hôm nay và ngày mai có gì?
+    - lịch của ngày tới như thế nào?
+    - ngày tới của mình có những việc gì?
+    - lịch làm việc của tôi ngày 23-08-2021 có gì?
+    - lịch làm việc ngày ra sao?
+    - lịch làm việc ngày mai có gì?
+    - ngày mai có những việc gì?
+    - hôm nay có lịch như nào?
+    - ngày 23 và 25 tháng này có những gì
+    - xem lịch của tôi vào buổi sáng ngày mai
+    - lịch của tôi vào cả tuần sau
+    - lịch của tôi vào buổi sáng buổi trưa và buổi chiều ngày mai
+    - lịch của tôi vào buổi sáng buổi trưa và buổi chiều cả tuần sau
+    - lịch của tôi vào buổi sáng buổi trưa và buổi chiều tháng 3
+    - lịch của tôi vào buổi sáng tháng tới ra sao?
+    - buổi sáng ngày tới tôi có việc gì không
+    - buổi trưa ngày tới tôi có việc không
+    - buổi sáng ngày tới tôi có việc gì?
+- intent: add_calendar
+  examples: |
+    - Add Event
+    - Tôi muốn thêm hoạt động vào [ngày mai](date)
+    - Tôi cần thêm hoạt động vào [ngày mốt](date)
+    - Thêm vào lịch vào [ngày mai](date) cho tui
+    - Thêm hoạt động vào [thứ 2 của tuần sau](date)
+    - Thêm hoạt động vào [ngày tới](date)
+    - Thêm hoạt động vào [mười hai giờ trưa](start_time) [ngày mai](date) cho tui
+    - Thêm hoạt động [test](summary) vào [mười hai giờ trưa](start_time) [ngày mai](date) cho tui
+    - Thêm hoạt động [Test](summary) vào lịch [ngày mai](date) dùm tui
+    - Thêm hoạt động ở [Đại học Cần Thơ](location) cho tui
+    - Thêm hoạt động [học](summary) lúc [12:00 AM](start_time) vào [ngày tới](date)
+    - Thêm sự kiện [Test](summary) ở [Cần Thơ](location)
+    - Thêm sự kiện [test] vào lịch [ngày mai](date) của tôi
+    - Thêm vào lịch sự kiện ở [Cần Thơ](location)
+    - Thêm sự kiện [học](summary) lúc [mười hai giờ trưa](start_time)
+    - thêm sự kiện lúc [12 giờ trưa](start_time)
+    - thêm sự kiện tại [Cần Thơ](location) [ngày tới](date)
+    - Thêm hoạt động lúc [mười giờ sáng](start_time) tại [Cần Thơ](location)
+    - Thêm sự kiện [Học Online](summary)
+    - thêm sự kiện [test](summary) lúc [11 giờ sáng](start_time) [ngày mai](date) ở [Cần Thơ](location)
+- intent: open_application
+  examples: |
+    - Mở [Word](app)
+    - Mở [Excel](app)
+    - Mở [Trình duyệt](app)
+    - Mở [Pycharm](app)
+    - Mở [Powerpoint](app)
+    - Tôi cần mở [word](app)
+    - Tôi muốn mở [excel](app)
+    - Tôi cần xài [Pycharm](app)
+    - Mở [trình duyệt](app) cho tui
+    - Open [Powerpoint](app)
+- intent: start_hour
+  examples: |
+    - [mười một giờ trưa](start_time)
+    - [mười hai giờ trưa](start_time)
+    - [11 giờ trưa](start_time)
+    - [12 giờ trưa](start_time)
+    - [mười giờ sáng](start_time)
+    - [10 giờ sáng](start_time)
+    - [chín giờ sáng](start_time)
+    - [9 giờ sáng](start_time)
+    - [13 giờ chiều](start_time)
+    - [14 giờ chiều](start_time)
+- intent: end_hour
+  examples: |
+    - [mười ba giờ](end_time)
+    - [mười bốn giờ](end_time)
+    - [01:00 PM](end_time)
+    - [02:00 PM](end_time)
+    - [03:00 PM](end_time)
+    - [04:00 PM](end_time)
+    - [01:30 PM](end_time)
+    - [02:30 PM](end_time)
+    - [04:00 PM](end_time)
+    - [05:00 PM](end_time)
+    - [06:00 PM](end_time)
+- intent: date
+  examples: |
+    - [ngày mai](date)
+    - [ngày mốt](date)
+    - [thứ 2 của tuần sau](date)
+    - [ngày tới](date)
+    - [thứ 3 của tuần sau](date)
+    - [ngày kia](date)
+    - [ngày hôm nay](date)
+    - [bữa tới](date)
+    - [bữa kia](date)
+    - [bữa nay](date)
+
+- intent: number
+  examples: |
+    - [1](num_of_event)
+    - [2](num_of_event)
+    - [3](num_of_event)
+    - [4](num_of_event)
+    - [5](num_of_event)
+    - [một](num_of_event)
+    - [hai](num_of_event)
+    - [ba](num_of_event)
+    - [bốn](num_of_event)
+    - [năm](num_of_event)
+- intent: open_webbrowser
+  examples: |
+    - Mở [Youtube](web)
+    - Mở [Google](web)
+    - Mở [Drive](web)
+    - Mở [Calendar](web)
+    - Mở trang chủ [đại học Cần Thơ](web)
+    - Mở [báo](web) điện tử
+    - Truy cập [Youtube](web)
+    - Truy cập [zing](web)
+    - Mở [nhạc](web)
+    - Mở một [album](web) nhạc bất kỳ
+- intent: affirm
+  examples: |
+    - Yes
+    - OK nhá
+    - Ok
+    - Đồng ý
+    - Có
+    - OK bạn nhá
+    - Ok hết nha
+    - Vâng
+    - Đầy đủ rồi
+    - Chính xác
+    - Đúng rồi
+    - Đúng
+    - Vâng ạ
+    - Ok rồi đó
+    - Chính xác hoàn toàn
+    - Không có gì sai cả
+    - Ok rồi đó nha bạn
+    - Đc rồi đó
+    - Chốt
+    - Ok luôn
+- intent: deny
+  examples: |
+    - No
+    - Không
+    - Không đồng ý
+    - Không nhé
+    - Tôi không nghĩ như vậy
+    - Không bao giờ
+    - Sai hoàn toàn rồi
+    - Deny
+    - Tôi không cần nữa
+    - Hông đúng
+    - Hoàn toàn không
+    - Sai rồi
+    - Không đúng gì cả
+    - Bỏ đi
+    - Không chính xác
+    - Sai quá sai
+    - Sai bét rồi
+    - Sai hết rồi
+    - Sai tất cả rồi
+    - Không đúng gì hết
+- intent: update_calendar
+  examples: |
+    - Tôi cần thay đổi hoạt động
+    - Cập nhật lịch giùm tôi
+    - Thay đổi lịch dùm tôi
+    - Sửa lịch lại dùm tôi
+    - Cập nhật hoạt động
+    - Thay đổi sự kiện [ngày mốt](date)
+    - Thay đổi thông tin sự kiện [thứ 2 của tuần sau](date)
+    - Tôi cần thay đổi một số thông tin của sự kiện
+    - Update event
+    - Tôi cần thay đổi sự kiện này vào [ngày mai](date)
+    - Chỉnh sửa sự kiện [ngày tới](date)
+    - Chỉnh sửa sự kiện của [ngày kia](date) đi
+    - Cập nhật sự kiện của [ngày tới](date) đi
+    - Tôi cần thay đổi sự kiện ở [thứ 2 của tuần sau]
+    - Chỉnh sửa sự kiện dùm tui
+    - Tôi cần bạn giúp chỉnh sửa sự kiện [ngày mai](date)
+    - Thay đổi sự kiện này dùm tôi
+    - Giúp tôi thay đổi sự kiện này cái
+    - Thay đổi thông tin sự kiện kia đi
+    - Hỗ trợ tôi đổi thông tin sự kiện kia cái
+
+- intent: del_calendar
+  examples: |
+    - Xóa hoạt động này giúp tôi
+    - Tôi cần xóa hoạt động này
+    - Xóa hoạt động
+    - Xóa lịch dùm tôi
+    - Delete
+    - Xóa lịch [ngày mai](date)
+    - Hủy sự kiện này dùm tôi
+    - Xóa đi hoạt động này vào [ngày mốt](date)
+    - Hủy hoạt động
+    - Bỏ hoạt động này
+    - Hủy sự kiện vào [ngày tới](date) đi
+    - Xóa sự kiện này ở [ngày mai] dùm tôi
+    - Tôi cần xóa sự kiện
+    - Giúp tôi xóa sự kiện
+    - Xóa sự kiện này đi
+    - Xóa hộ tôi cái
+    - Hủy sự kiện này đi
+    - Bỏ các sự kiện này đi
+    - Hủy sự kiện
+    - Xóa sự kiện đi
+- intent: total_covid_vn
+  examples: |
+    - Covid tại Việt Nam?
+    - Tình hình Covid ở Việt Nam như thế nào?
+    - Dịch Covid ở Việt Nam ra sao
+    - Số liệu Covid tại Việt Nam
+    - Tổng số [ca nhiễm](case) ở Việt Nam là bao nhiêu?
+    - Số [ca nhiễm](case) ở Việt Nam là bao nhiêu rồi
+    - Việt Nam có bao nhiêu [ca mắc](case) Covid?
+    - Số người [nhiễm](case) Covid ở Việt Nam là bao nhiêu?
+    - Bao nhiêu người được [chữa khỏi](case) Covid ở Việt Nam?
+    - Số ca được [chữa khỏi](case) Covid ở Việt Nam?
+    - Đã có bao nhiêu người [khỏi bệnh](case) ở Việt Nam?
+    - Số ca đã [hết](case) Covid ở Việt Nam?
+    - Số ca [đang điều trị](case) Covid ở Việt Nam?
+    - Có bao nhiêu người [đang điều trị] Covid?
+    - Số [ca đang điều trị](case) tại Việt Nam
+    - Số [ca đang chữa trị](case) tại Việt Nam
+    - Số người [chết](case) ở Việt Nam là bao nhiêu
+    - Việt Nam có bao nhiều người [chết](case) vì Covid rồi?
+    - Số người [tử vong](case) vì Covid ở Việt Nam?
+    - Tính đến nay có bao nhiêu [ca chết](case) vì Covid
+- intent: covid_city
+  examples: |
+    - Tình hình Covid ở [Tp. Hồ Chí Minh](location)
+    - Tình hình Covid ở [Cần Thơ](location)
+    - Tình hình Covid ở [Hà Nội](location)
+    - Tình hình Covid ở [An Giang](location)
+    - Dịch Covid ở [Cần Thơ](location) hôm nay
+    - Số liệu Covid tại [Cần Thơ](location)
+    - Cho tình hình covid tại [Cần Thơ](location)
+    - Diễn biến Covid tại [Cần Thơ](location)
+    - Tình hình bệnh dịch tại [Cần Thơ](location)
+    - Cho tôi xem số liệu về Covid tại [Cần Thơ](location)
+- intent: weather_now
+  examples: |
+    - Thời tiết hôm nay ở [Tp. Hồ Chí Minh](location) ?
+    - Thời tiết hôm nay ở [Cần Thơ](location)?
+    - Thời tiết ở [Tp. Hồ Chí Minh](location)?
+    - Thời tiết ở [Cần Thơ](location)?
+    - [Cần Thơ](location) nay thời tiết như nào?
+    - Thời tiết ở [Cần Thơ](location)
+    - Thời tiết [Cần Thơ](location) như nào?
+    - Tình hình thời tiết [Cần Thơ](location) ra sao?
+    - Cho hỏi thời tiết tại [Cần Thơ](location)
+    - Thời tiết [Cần Thơ](location)
+- intent: whattime
+  examples: |
+    - Mấy giờ rồi?
+    - Bây giờ là mấy giờ
+    - What time is it?
+    - Cho mình hỏi mấy giờ rồi
+    - Bây giờ là mấy giờ
+    - Mấy giờ rồi
+    - Cho hỏi mấy giờ rồi đó bạn
+    - Bao nhiêu giờ bạn
+    - Bạn ơi mấy giờ
+    - Mấy giờ đó bạn
+- intent: covid_info
+  examples: |
+    - Covid-19 là gì?
+    - Dịch Covid là gì?
+    - Covid-19
+    - Bệnh SAR-COV?
+    - Corona là gì?
+    - Dịch Corona là sao?
+    - Covid là cái gì thế?
+    - Covid là sao?
+    - Covid-19 là gì?
+    - Cái gì là Covid.

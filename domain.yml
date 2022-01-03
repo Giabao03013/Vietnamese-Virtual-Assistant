@@ -1,0 +1,216 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- open_webbrowser
+- see_calendar
+- total_covid_vn
+- add_calendar
+- start_hour
+- end_hour
+- date
+- affirm
+- greet
+- goodbye
+- ask_func
+- how_are_you
+- what_name
+- ask_fun_calendar
+- thanks
+- deny
+- open_application
+- update_calendar
+- del_calendar
+- covid_city
+- weather_now
+- whattime
+- covid_info
+- number
+
+entities:
+- app
+- case
+- date
+- end_time
+- location
+- start_time
+- summary
+- web
+
+
+slots:
+  summary:
+    type: text
+  location:
+    type: text
+  start_time:
+    type: text
+  end_time:
+    type: text
+  date:
+    type: text
+  what_change:
+    type: text
+  eventid:
+    type: text
+  num_of_event:
+    type: text
+  case:
+    type: text
+  city:
+    type: text
+  datenew:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! Bạn thế nào
+  - text: Chào bạn, rất vui khi được gặp bạn!
+  - text: Bạn cần mình giúp gì ạ!
+  - text: Bạn cần giúp đỡ gì ạ
+  - text: Mình nghe đây bạn ơi
+  utter_bye:
+  - text: Bye bye
+  utter_nothing:
+  - text: Không có gì đâu nè
+  - text: hihi. Không có chi
+  - text: Okay
+  utter_func:
+  - text: Mình có thể làm nhiều thứ như là quản lý lịch biểu, trả lời các câu hỏi của bạn.
+  - text: Mình có thể nói chuyện với bạn và có thể quản lý lịch biểu của bạn
+  - text: Mình vừa có thể giải đáp các thắc mắc của bạn và quản lý lịch biểu của bạn
+  - text: Mình có thể làm tất cả mọi thứ mà bạn yêu cầu
+  - text: Việc gì mình cũng có thể làm được hết nha
+  - text: Không có việc gì là mình không thể làm được?
+  - text: Làm gì cũng được hết đó bạn ơi
+  - text: Bạn yêu cầu gì mình cũng làm được hết nha
+  utter_func_calendar:
+  - text: Mình có giúp bạn xem các sự kiện, thêm sự kiện, chỉnh sửa và xóa các sự kiện bạn muốn
+  - text: Mình có thể giúp bạn xem, thêm, chỉnh sửa và xóa các sự kiện
+  utter_happy:
+  - text: Great, carry on!
+  utter_how_are_you:
+  - text: Tôi cực kì khỏe luôn nhé
+  - text: Tôi thì vẫn ổn, bạn thì sao?
+  - text: Ổn lắm nha bạn
+  - text: Cực kỳ ok nha
+  - text: Không có gì cả, mình vẫn như bình thường nha
+  utter_askname:
+  - text: Mình tên Caba, rất vui khi được biết bạn
+  - text: Bạn có thể gọi mình là Caba
+  - text: Tên của mình là Caba
+  - text: Mình là Caba, rất vui khi được biết bạn
+  - text: Mình là Caba, còn bạn tên là gì?
+  utter_add_calendar:
+  - text: Ok bạn nhá
+  utter_ask_date:
+  - text: Bạn chọn ngày nào?
+  utter_ask_summary:
+  - text: Tên hoạt động là gì?
+  utter_ask_start_time:
+  - text: Thời gian bắt đầu của sự kiện là?
+  utter_ask_end_time:
+  - text: Thời gian kết thúc của sự kiện là?
+  utter_ask_location:
+  - text: Địa điểm diễn ra hoạt động là ở đâu?
+  utter_ask_what_change:
+  - text: Bạn muốn thay đổi cái gì?
+  utter_ask_num_of_event:
+  - text: Bạn muốn chọn hoạt động nào?
+  utter_details:
+  - text: |2-
+       Bạn cần thêm hoạt động vào ngày {Date} với: 
+       - Nội dung: {Summary} 
+       - Thời gian bắt đầu: {Start_time}
+       - Thời gian kết thúc: {End_time} 
+       - Địa điểm: {Location} 
+       Bạn có đồng ý với các thông tin trên không? 
+  utter_ask_confirm:
+  - text: Bạn có đồng ý với các thông tin trên không ?
+  utter_ask_sentences:
+  - text: Bạn cần dịch câu nào thế
+  utter_ask_datenew:
+  - text: Bạn chọn ngày nào?
+actions:
+- action_covid_city
+- action_covid_info
+- action_del_no
+- action_del_yes
+- action_see_event
+- action_openapp
+- action_openweb
+- action_say_no
+- action_say_yes
+- action_submit
+- action_submit_del
+- action_submit_update
+- action_total_covid
+- action_whattime
+- action_update_no
+- action_update_yes
+- action_weather_city
+- utter_add_calendar
+- utter_ask_date
+- utter_ask_end_time
+- utter_ask_location
+- utter_ask_start_time
+- utter_ask_summary
+- utter_askname
+- utter_bye
+- utter_details
+- utter_func
+- utter_greet
+- validate_add_event_form
+- validate_delete_form
+- validate_translate_form
+- validate_update_event_form
+
+forms:
+  add_event_form:
+    required_slots:
+      date:
+      - type: from_text
+      summary:
+      - type: from_text
+      start_time:
+      - type: from_text
+      end_time:
+      - type: from_text
+      location:
+      - type: from_text
+  update_event_form:
+    required_slots:
+      date:
+      - type: from_text
+      datenew:
+      - type: from_text
+      num_of_event:
+      - type: from_text
+      what_change:
+      - type: from_text
+      summary:
+      - type: from_text
+      eventid:
+      - type: from_text
+      start_time:
+      - type: from_text
+      end_time:
+      - type: from_text
+      location:
+      - type: from_text
+  delete_form:
+    required_slots:
+      date:
+      - type: from_text
+      num_of_event:
+      - type: from_text
+      eventid:
+      - type: from_text
+  translate_form:
+    required_slots:
+      src:
+      - type: from_text
+      dest:
+      - type: from_text
+      sentences:
+      - type: from_text

@@ -1,0 +1,22 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Xin chào", "Chào bạn", "Hey you", "Cho mình hỏi với?"],
+         "responses": ["Chào bạn", "Rất vui khi được gặp bạn", "Chào bạn, mình có thể giúp gì được cho bạn"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "Gặp lại bạn sao", "Tạm biệt","Cảm ơn bạn đã giúp","Bye bye"],
+         "responses": ["Gặp lại bạn sau, cảm ơn bạn đã sử dụng tới mình", "Chúc bạn có một ngày vui vẻ", "Hẹn gặp lại bạn","Tạm biệt và chúc bạn có một ngày vui vẻ"]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Tks", "Cảm ơn bạn"],
+         "responses": ["Rất vui khi được giúp bạn", "Không có gì đâu!", "Đó là công việc của tôi"]
+        },
+        {"tag": "hours",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "menu",
+         "patterns": ["I want to order", "What kinds of food are there?", "What is your delicous food?" ],
+         "responses": ["Are you ready to order? Our restaurant have pizza, vegetable pasta, beefsteack. These is special of our restaurant", "Can I help you? This is menu. Please ask me if you have any question."]
+        }]}
